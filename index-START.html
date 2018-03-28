@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hold Shift to Check Multiple Checkboxes</title>
+</head>
+<body>
+  <style>
+
+    html {
+      font-family: sans-serif;
+      background:#ffc600;
+    }
+
+    .inbox {
+      max-width:400px;
+      margin:50px auto;
+      background:white;
+      border-radius:5px;
+      box-shadow:10px 10px 0 rgba(0,0,0,0.1);
+    }
+
+    .item {
+      display:flex;
+      align-items:center;
+      border-bottom: 1px solid #F1F1F1;
+    }
+
+    .item:last-child {
+      border-bottom:0;
+    }
+
+
+    input:checked + p {
+      background:#F9F9F9;
+      text-decoration: line-through;
+    }
+
+    input[type="checkbox"] {
+      margin:20px;
+    }
+
+    p {
+      margin:0;
+      padding:20px;
+      transition:background 0.2s;
+      flex:1;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+      border-left: 1px solid #D1E2FF;
+    }
+
+
+  </style>
+   <!--
+   Detta skulle kunna vara en layout i en mailklient.
+   
+   När en användare klickar i en kryssruta, och sedan håller ner
+   skift och klickar i en annan kryssruta ska alla kryssrutor
+   mellan dem också kryssas i, automatiskt.
+
+  -->
+  <div class="inbox">
+    <div class="item">
+      <input type="checkbox">
+      <p>Detta föreställer en inbox.</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Kryssa i en ruta</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Håll skifttangenten nedtryckt</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Kryssa i en ruta längre ner</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Nu ska alla rutor mellan de två du kryssade i automatiskt vara ikryssade</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Använd inga bibliotek som jQuery eller liknande</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Bara vanlig JavaScript</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Lycka till!</p>
+    </div>
+  </div>
+
+<script>
+</script>
+</body>
+</html>
